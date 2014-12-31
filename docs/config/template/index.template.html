@@ -71,8 +71,8 @@
 
         <div layout="row" flex class="fill-height">
           <div class="md-toolbar-item md-breadcrumb">
-            <span hide-sm ng-if="menu.currentSection.name">{{menu.currentSection.name}}</span>
-            <span class="menu-separator-icon" ng-if="menu.currentPage" style="padding: 0 10px;" hide-sm>
+            <span hide-lt-md ng-if="menu.currentSection.name">{{menu.currentSection.name}}</span>
+            <span class="menu-separator-icon" ng-if="menu.currentPage" style="padding: 0 10px;" hide-lt-md>
               <img style="height: 16px;" src="img/docArrow.png" alt="" aria-hidden="true">
             </span>
             <span style="display: inline-block;" ng-bind="(menu.currentPage | humanizeDoc) || 'Angular Material'"></span>
@@ -95,7 +95,7 @@
                   position: absolute;
                   left: 0px;
                   top: -3px;"></md-icon>
-              <span hide-sm>View Demo</span>
+              <span hide-lt-md>View Demo</span>
             </md-button>
 
             <md-button ng-class="{hide: !currentDoc}"
@@ -106,13 +106,12 @@
                   position: absolute;
                   left: 0px;
                   top: -3px;"></md-icon>
-              <span hide-sm>View on Github</span>
-              <span hide-gt-sm>Source</span>
+              <span hide-lt-md>View on Github</span>
             </md-button>
 
             <md-button ng-class="{hide: !currentDoc}"
               ng-href="{{currentDoc.githubEditUrl}}"
-              hide-sm
+              hide-lt-md
               style="position: relative; padding-left: 30px;">
               <md-icon icon="/img/icons/ic_launch_24px.svg" style="
                   height: 36px;

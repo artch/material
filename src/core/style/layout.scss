@@ -146,6 +146,15 @@
   @include flex-properties-for-name(gt-md);
 }
 
+@media (max-width: $layout-breakpoint-md) {
+  [hide-lt-md] {
+    &:not([show-gt-md]):not([show-sm]):not([show-md]) {
+      display: none;
+    }
+  }
+  @include layout-for-name(gt-md);
+  @include flex-properties-for-name(gt-md);
+}
 @media (min-width: $layout-breakpoint-md) and (max-width: $layout-breakpoint-lg) {
   [hide-lg], [hide] {
     &:not([show-lg]) {
